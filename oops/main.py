@@ -62,24 +62,24 @@
 
 # constructor
 
-class cars:   # super class
-    def __init__(self,a,b):  # initilization
-        self.a = a
-        self.b = b
+# class cars:   # super class
+#     def __init__(self,a,b):  # initilization
+#         self.a = a
+#         self.b = b
 
-    def hello(self):       # object method
-        print(f"hello\n{self.a},{self.b}") 
+#     def hello(self):       # object method
+#         print(f"hello\n{self.a},{self.b}") 
 
-class newcars:   #multiple inheritance
-    def __init__(self):
+# class newcars:   #multiple inheritance
+#     def __init__(self):
     
-        print("hello world")
+#         print("hello world")
 
 
-class honda(newcars,cars):   # this is inheritance all propertice other class to inherite
-    # def __init__(self, a, b):     # sub class
-    #     super().__init__(a, b) 
-  pass         
+# class honda(newcars,cars):   # this is inheritance all propertice other class to inherite
+#     # def __init__(self, a, b):     # sub class
+#     #     super().__init__(a, b) 
+#   pass         
        
        
 # Allcars = cars(12,13)
@@ -89,10 +89,61 @@ class honda(newcars,cars):   # this is inheritance all propertice other class to
 # print(Allcars2.a) 
 # print(Allcars2.b)
 
-allcars = honda()
+# allcars = honda()
 
-allcars.hello()
+# allcars.hello()
 
+
+# Polymorphism?
+
+# class person:
+#     def __init__(self,name):
+#         self.name = name
+#     def show(self):
+#         print(self.name)   
+      
+
+# class animal(person):    # method overrinding
+#     # def __init__(self,name):
+#     #     self.name = name
+#     def show(self):
+#         print(self.name)    
+
+# # person1 = person('sachin') 
+# animal1 = animal('lion')    # firts peroitry
+
+# # person1.show()
+# animal1.show()
+
+
+
+# abstraction
+
+from abc import ABC , abstractmethod
+
+class shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perieter(self):
+        pass
+
+class Circle(shape):
+    def __init__(self,radius):
+        self.radius = radius
+
+    def area(self):
+        pass
+
+    def perieter(self):
+        pass    
+
+circle1 = Circle(12)          
+
+        
     
 
   
